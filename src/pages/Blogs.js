@@ -1,9 +1,27 @@
-
+import axios from 'axios';
+import {useState, useEffect} from 'react';
 
 export default function Blogs() {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://gracesoft.wuletaw/wp-json/wp/v2/posts')
+            .then((res) => {
+                setBlogs(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, [])
+
     return (
         <div>
-            <h2>This is blogs page</h2>
+            <h2></h2>
+            {blogs.length != 0 ? blogs.map((blog) => {
+                return <div key={blog.id}>
+                    <h2>{blog.title.rendered}</h2>
+                </div>;
+            }) : <h2>Loading...</h2>}
         </div>
     )
 }
