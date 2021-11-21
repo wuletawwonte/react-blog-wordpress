@@ -5,7 +5,7 @@ export default function Blogs() {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        axios.get('http://gracesoft.wuletaw/wp-json/wp/v2/posts')
+        axios.get('/wp-json/wp/v2/posts')
             .then((res) => {
                 setBlogs(res.data);
             })
