@@ -1,0 +1,59 @@
+.topbarContainer {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.topbarLeft {
+    flex: 4;
+}
+.logo {
+    margin-left: 80px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.topbarCenter {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+}
+
+.topbarCenter span {
+    font-size: 15px;
+    font-weight: 600;
+}
+.callUsSeparator {
+    margin-left: 6px;
+}
+.callUsEmail {
+    margin-left: 8px;
+}
+
+.topbarRight {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 80px;
+}
+.loginLink {
+    cursor: pointer;
+}
+.topbarSubscribeBtn button{
+    margin-left: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border: none;
+    height: 35px;
+    border-radius: 3px;
+}
+.topbarLinks {
+    margin-left: 12px;
+}
