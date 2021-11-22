@@ -1,0 +1,11 @@
+.pageTitle {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.pageTitle span {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: groove rgba(39, 38, 38, 0.425) 2px;
+}
