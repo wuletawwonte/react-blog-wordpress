@@ -16,7 +16,6 @@ export default function Blogs() {
 
     return (
         <div>
-            <h2></h2>
             {blogs.length !== 0 ? blogs.map((blog) => {
                 return <div key={blog.id}>
                     <h2>{blog.title.rendered}</h2>
