@@ -54,6 +54,9 @@
     height: 35px;
     border-radius: 3px;
 }
+.topbarSubscribeBtn button:hover{
+    cursor: pointer;
+}
 .topbarLinks {
     margin-left: 12px;
 }
