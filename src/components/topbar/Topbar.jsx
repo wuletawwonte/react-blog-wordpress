@@ -5,10 +5,12 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo">
+          <Link to="/" className="logo">
+        <span>
           <b>Grace</b>
           <i>soft</i>
         </span>
+        </Link>
       </div>
       <div className="topbarCenter">
         <span className="callUsPhone">Call Us: +251926350413</span>

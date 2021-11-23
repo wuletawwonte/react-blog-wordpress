@@ -10,10 +10,11 @@
 .topbarLeft {
     flex: 4;
 }
-.logo {
+.logo , .logo:active {
     margin-left: 80px;
     font-size: 30px;
-    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 .topbarCenter {
     flex: 4;
