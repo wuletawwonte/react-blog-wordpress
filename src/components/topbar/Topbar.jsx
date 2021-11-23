@@ -1,4 +1,5 @@
 import "./topbar.css";
+import { Link } from "react-router-dom";
 
 export default function Topbar() {
   return (
@@ -16,7 +17,9 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLoginLink">
-          <span className="loginLink">Login</span>
+          <Link to="/login" className="loginLink">
+            <span>Login</span>
+          </Link>
         </div>
         <div className="topbarSubscribeBtn">
           <button className="subscribeBtn">Subscribe to our blog</button>

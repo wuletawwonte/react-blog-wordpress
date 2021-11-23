@@ -39,8 +39,9 @@
     justify-content: flex-end;
     margin-right: 80px;
 }
-.loginLink {
-    cursor: pointer;
+.loginLink , .loginLink:active {
+    text-decoration: none;
+    color: inherit;
 }
 .topbarSubscribeBtn button{
     margin-left: 12px;
