@@ -1,7 +1,17 @@
 .blogsContainer {
+    margin-left: 80px;
+    margin-right: 80px;
     margin-top: 25px;
-    border: groove gray 1px;
-    display: flex;
-    flex-direction: column;
+    /* border: groove gray 1px; */
+    /* display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */ 
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr 1fr;
+
     height: 60vh;
 }
+
+/* .article {    
+   
+} */

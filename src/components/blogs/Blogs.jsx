@@ -19,8 +19,7 @@ export default function Blogs() {
     return (
         <div className="blogsContainer">
             {blogs.length !== 0 ? blogs.map((blog) => {
-                return <div key={blog.id}>
-                    <h2>{blog.title.rendered}</h2>
+                return <div className="article" key={blog.id}>
                     <Article blog={blog}/>
                 </div>;
             }) : <h2>Loading...</h2>}
