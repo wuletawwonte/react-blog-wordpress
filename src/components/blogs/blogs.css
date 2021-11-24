@@ -1,0 +1,7 @@
+.blogsContainer {
+    margin-top: 25px;
+    border: groove gray 1px;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+}

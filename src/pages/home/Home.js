@@ -1,4 +1,5 @@
 import Topbar from '../../components/topbar/Topbar';
+import Blogs from '../../components/blogs/Blogs';
 import './home.css';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
             <div className="pageTitle">
                 <span>Latest Posts</span>
             </div>
+            <Blogs />
         </div>
     )
 }
