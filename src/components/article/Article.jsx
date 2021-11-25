@@ -1,12 +1,14 @@
 import './article.css';
+import Editor from '../../components/editor/Editor';
 
 export default function Article(props) {
-    const article = props.blog;
+    const singleArticle = props.blog;
     return (
         <div className="article">
-            {article.featured_image_url ? <img className="articleImage" src={article.featured_image_url} alt="article.title.rendered" /> : ''}
-            <h2 dangerouslySetInnerHTML={{__html: props.blog.title.rendered}}></h2>
-            {article.featured_image_url ? '' :<p dangerouslySetInnerHTML={{__html: article.excerpt.rendered}}></p>}
+            {singleArticle.featured_image_url ? <img className="articleImage" src={singleArticle.featured_image_url} alt="singleArticle.title.rendered" /> : ''}
+            <h2 dangerouslySetInnerHTML={{__html: singleArticle.title.rendered}}></h2>
+            <p dangerouslySetInnerHTML={{__html: singleArticle.excerpt.rendered}}></p>
+            <Editor editorId={singleArticle.author} />
         </div>
     )
 }

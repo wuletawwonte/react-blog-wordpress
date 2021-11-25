@@ -1,5 +1,6 @@
 .articleImage {
     width: 100%;
+    object-fit: cover;
 }
 
 .article {
@@ -11,6 +12,6 @@
 }
 
 .article p {
-    color: gray;
-    font-size: small;
+    font-size: medium;
+    font-weight: lighter;
 }
