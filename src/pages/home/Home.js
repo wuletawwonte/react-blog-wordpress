@@ -5,12 +5,12 @@ import './home.css';
 export default function Home() {
 
     return (
-        <div>
+        <>
             <Topbar />
             <div className="pageTitle">
                 <span>Latest Posts</span>
             </div>
             <Blogs />
-        </div>
+        </>
     )
 }

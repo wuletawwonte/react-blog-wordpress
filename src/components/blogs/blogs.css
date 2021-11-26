@@ -1,13 +1,53 @@
 .blogsContainer {
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 25px;
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: 20% 35% 25% 20%;
-  grid-auto-rows: auto auto;
+  grid-auto-rows: auto;
   height: 60vh;
   grid-auto-flow: dense;
+}
+
+@media only screen and (max-width: 1024px) {
+    .blogsContainer {
+        margin-left: 2%;
+        margin-right: 2%;      
+        grid-template-columns : repeat(auto-fill, minmax(33%, 1rem));
+        /* align-items: center */
+    }
+    .blogsContainer div:nth-child(3n) {
+        border-right: none;    
+    }
+    .blogsContainer div:nth-child(4n) .articleImage{
+        display: block;    
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .blogsContainer {
+        grid-template-columns : repeat(auto-fill, minmax(50%, 1rem));
+        /* align-items: center */
+    }
+    .blogsContainer div:nth-child(2n) {
+        border-right: none;    
+    }
+    .blogsContainer div:nth-child(4n) .articleImage{
+        display: block;    
+    }
+}
+@media only screen and (max-width: 636px) {
+    .blogsContainer {
+        grid-template-columns : repeat(auto-fill, minmax(100%, 1rem));
+        /* align-items: */
+    }
+    body {
+        width: 100%;
+    }
+    .blogsContainer div:nth-child(4n) .articleImage{
+        display: block;    
+    }
 }
 
 .blogsContainer div:nth-child(n) {

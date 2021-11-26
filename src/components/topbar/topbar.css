@@ -1,9 +1,10 @@
 .topbarContainer {
+    margin-left: 5%;
+    margin-right: 5%;  
     height: 120px;
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
-    /* position: sticky; */
     top: 0;
 }
 
@@ -11,7 +12,6 @@
     flex: 4;
 }
 .logo , .logo:active {
-    margin-left: 85px;
     font-size: 30px;
     text-decoration: none;
     color: inherit;
@@ -38,7 +38,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 85px;
 }
 .loginLink , .loginLink:active {
     text-decoration: none;
