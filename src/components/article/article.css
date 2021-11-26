@@ -4,7 +4,9 @@
 }
 
 .article {
-    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 .article h2 {
@@ -12,6 +14,7 @@
 }
 
 .article p {
-    font-size: medium;
-    font-weight: lighter;
+    font-size: 0.8rem;
+    color: gray;    
+    font-weight: normal;
 }

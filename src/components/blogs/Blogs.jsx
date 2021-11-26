@@ -7,7 +7,7 @@ export default function Blogs() {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        axios.get('/wp-json/wp/v2/posts?_embed')
+        axios.get('/wp-json/wp/v2/posts?per_page=8')
             .then((res) => {
                 setBlogs(res.data);
             })

@@ -4,23 +4,18 @@
   margin-top: 25px;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 25% 30% 20% 25%;
+  grid-template-columns: 20% 35% 25% 20%;
   grid-auto-rows: auto auto;
   height: 60vh;
   grid-auto-flow: dense;
 }
 
-.blogsContainer div:nth-child(n+2) {
+.blogsContainer div:nth-child(n) {
     border-right: groove rgba(0, 0, 0, 0.068) 1pt;
 }
-.blogsContainer div:nth-child(4) {
+.blogsContainer div:nth-child(4n) {
     border-right: none;    
 }
-.blogsContainer div:nth-child(4) .articleImage{
+.blogsContainer div:nth-child(4n) .articleImage{
     display: none;    
 }
-/* .blogsContainer div:nth-child(2) {
-  grid-row: 1;
-  grid-column: 2 / 4;
-  grid-row-end: span 1;
-} */
