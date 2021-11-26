@@ -1,24 +1,11 @@
-import './editor.css';
-import {useState, useEffect} from 'react';
-import axios from 'axios';
+import "./editor.css";
 
 export default function Editor(props) {
-    const editorId = props.editorId;
-    const [editor, setEditor] = useState({});
-    useEffect(() => {
-        axios.get('/wp-json/wp/v2/users/'+editorId)
-            .then((res) => {
-                setEditor(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    });
-    return (
-        <>
-            {JSON.stringify(editor) === '{}' ? <div className="editorContainer">
-            <p>{editor.name}</p>            
-            </div> : "loading"}
-        </>
-    )
+  const { avatar_urls, name } = props.editorData;
+  return (
+    <div className="editorContainer">
+        <img src={avatar_urls['48']} alt={name} />
+        <p>{name}</p>
+    </div>
+  );
 }

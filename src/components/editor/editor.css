@@ -1,0 +1,14 @@
+.editorContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.editorContainer img {
+    box-shadow: 5px;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    margin-right: 5px;
+}

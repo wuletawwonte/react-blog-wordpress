@@ -1,5 +1,5 @@
 import "./article.css";
-// import Editor from "../../components/editor/Editor";
+import Editor from "../../components/editor/Editor";
 import {useEffect, useState} from 'react';
 import axios from 'axios';
 
@@ -8,9 +8,8 @@ export default function Article(props) {
   const [authorData, setAuthorData] = useState({});
 
   useEffect(() => {
-    axios.get("/wp-json/wp/v2/users/" + author)
+    axios.get(`/wp-json/wp/v2/users/${author}`)
       .then((res) => {
-        console.log(res.data);
         setAuthorData({
           isLoading: true,
           data: res.data
@@ -40,8 +39,7 @@ export default function Article(props) {
           __html: excerpt.rendered.substring(0, 150),
         }}
       ></p>
-      {authorData.isLoading ? authorData.data.name : 'Loading' } 
-      {/* <Editor editorId={author} /> */}
+      {authorData.isLoading ? <Editor editorData={authorData.data} /> : 'Loading' } 
     </>
   );
 }
