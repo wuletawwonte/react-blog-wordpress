@@ -1,7 +1,7 @@
 .mainContainer {
     display: flex;        
     height: 100vh;
-    align-items: center;
+    align-items: center;    
 }
 
 .leftSide {
@@ -14,7 +14,8 @@
 }
 
 .leftInside {
-    margin-left: 5%;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
 }
 .leftInside h1 {
@@ -78,7 +79,7 @@
     width: 100%;
     font-size: 16px;
     padding-left: 16px;
-    background-color: rgb(197, 196, 196);    
+    background-color: rgb(228, 225, 225);    
 }
 .username {
     margin-top: 20px;
