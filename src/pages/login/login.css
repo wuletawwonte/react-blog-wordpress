@@ -31,8 +31,10 @@
     margin-bottom: 20px;
 }
 .leftInside .phoneNumbers h2 {
+    border-bottom: solid yellow 2px;
     font-weight: 500;
     color: rgb(46, 43, 43);
+    width: fit-content;
 }
 .linkToHome {
     text-decoration-line: none;
@@ -54,17 +56,15 @@
     margin-left: auto;
     margin-right: auto;
     width: 320px;    
-    height: 370px;
-    border-radius: 15px;
+    border-radius: 10px;
     align-items: center;
     padding-left: 30px;
-    padding-top: 30px;
+    padding-top: 50px;
     padding-right: 45px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 .rightInside > h2 {
     font-size: 30px;
-    margin-top: 20px;
 }
 .rightInside p{
     margin-top: 10px;
@@ -76,7 +76,7 @@
     height: 50px;
     border: none;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 16px;
     background-color: rgb(197, 196, 196);    
 }
@@ -88,11 +88,15 @@
     margin-bottom: 10px;
 }
 .loginButton {
+    border-radius: 3px;
     height: 50px;
     border: none;
     width: 106%;
     background-color:black;
     color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 .loginButton:hover {
     cursor: pointer;
