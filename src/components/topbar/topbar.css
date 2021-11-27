@@ -12,6 +12,7 @@
     flex: 4;
 }
 .logo , .logo:active {
+    margin-left: 10px;
     font-size: 30px;
     text-decoration: none;
     color: inherit;
@@ -60,4 +61,5 @@
 }
 .topbarLinks {
     margin-left: 12px;
+    margin-right: 10px;
 }

@@ -1,0 +1,49 @@
+.mainContainer {
+    display: flex;        
+    height: 100vh;
+    align-items: center;
+}
+
+.leftSide {
+    display: flex;
+    flex: 6;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;    
+}
+
+.leftInside {
+    margin-left: 10%;
+    width: 40%;
+}
+.leftInside h1 {
+    font-size:40px;
+    color: rgb(65, 62, 62);
+}
+.leftInside p {
+    margin-top: 20px;
+    color: gray;
+    font-weight:500;
+}
+.leftInside .phoneNumbers {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.leftInside .phoneNumbers h2 {
+    font-weight: 500;
+    color: rgb(46, 43, 43);
+}
+.linkToHome {
+    text-decoration-line: none;
+    font-size: 20px;
+    font-weight: 450;
+    background-color: yellow;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.rightSide {
+    flex: 6;
+    border: groove gray 1px;
+}
