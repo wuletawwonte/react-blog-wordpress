@@ -47,7 +47,8 @@
 }
 
 .rightSide {
-    background-color: lavender;
+    /* background-color:wheat; */
+    background-color:lavender;
     flex: 6;
     display: flex;
     height: inherit;
