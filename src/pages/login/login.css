@@ -8,7 +8,6 @@
     display: flex;
     flex: 6;
     height: inherit;
-    justify-content: center;
     align-items: center;
     align-content: flex-start;    
 }
@@ -47,7 +46,6 @@
 }
 
 .rightSide {
-    /* background-color:wheat; */
     background-color:lavender;
     flex: 6;
     display: flex;
@@ -57,13 +55,10 @@
 .rightInside {
     margin-left: auto;
     margin-right: auto;
-    width: 320px;    
+    width: 400px;    
     border-radius: 10px;
     align-items: center;
-    padding-left: 30px;
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
+    padding: 50px 30px;
 }
 .rightInside > h2 {
     font-size: 30px;
@@ -74,7 +69,7 @@
 }
 
 .inputContainer input{
-    border-radius: 3px;
+    border-radius: 1px;
     height: 50px;
     border: none;
     width: 100%;
@@ -82,6 +77,15 @@
     padding: 15px;
     background-color: rgb(228, 225, 225);    
 }
+.inputContainer input:focus {
+    outline: none;
+    content: none;
+    border: solid blue 1px;
+}
+.inputContainer input:focus::placeholder {
+    opacity: 0;
+}
+
 .username {
     margin-top: 20px;
 }
@@ -90,7 +94,7 @@
     margin-bottom: 10px;
 }
 .loginButton {
-    border-radius: 3px;
+    border-radius: 1px;
     height: 50px;
     border: none;
     width: 100%;
