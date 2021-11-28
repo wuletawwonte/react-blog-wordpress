@@ -1,5 +1,11 @@
 * {
-    margin: 0;
-    background-color: #f9f6ec;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #f9f6ec;
+  font-family: "Roboto", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
