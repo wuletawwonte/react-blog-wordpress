@@ -85,7 +85,6 @@
 .inputContainer input:focus::placeholder {
     opacity: 0;
 }
-
 .username {
     margin-top: 20px;
 }
