@@ -43,10 +43,12 @@ export default function Login() {
                 type="text"
                 placeholder="User name"
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.username}
+                
               />
-              {formik.errors.username ? (
-                <div>{formik.errors.username}</div>
+              {formik.touched.username && formik.errors.username ? (
+                <div className="errorContainer">{formik.errors.username}</div>
               ) : null}
             </div>
             <div className="inputContainer">
@@ -57,10 +59,11 @@ export default function Login() {
                 type="password"
                 placeholder="Password"
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.password}
               />
-              {formik.errors.password ? (
-                <div>{formik.errors.password}</div>
+              {formik.touched.password && formik.errors.password ? (
+                <div className="errorContainer">{formik.errors.password}</div>
               ) : null}
             </div>
             <input className="loginButton" type="submit" value="Login" />
@@ -75,11 +78,11 @@ export default function Login() {
 const validate = (values) => {
   const errors = {};
   if (!values.username) {
-    errors.username = "Required";
+    errors.username = "Please enter your Username";
   }
 
   if (!values.password) {
-    errors.password = "Required";
+    errors.password = "Please enter your Password";
   }
 
   return errors;

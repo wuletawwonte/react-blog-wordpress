@@ -82,6 +82,9 @@
     content: none;
     border: solid blue 1px;
 }
+.errorContainer {
+    color: red;
+}
 .inputContainer input:focus::placeholder {
     opacity: 0;
 }
@@ -90,9 +93,9 @@
 }
 .password {
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 .loginButton {
+    margin-top: 10px;
     border-radius: 1px;
     height: 50px;
     border: none;
