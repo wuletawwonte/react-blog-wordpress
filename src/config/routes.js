@@ -6,19 +6,19 @@ import Dashboard from "../pages/dashboard/Dashboard";
 const routes = [
   {
     path: "/",
-    component: Home,
+    component: <Home />,
   },
   {
     path: "/login",
-    component: Login,
+    component: <Login />,
   },
   {
     path: "/dashboard",
-    component: "dashboard",
+    component: <Dashboard />,
   },
   {
     path: "/*",
-    component: PageNotFound,
+    component: <PageNotFound />,
   },
 ];
 
