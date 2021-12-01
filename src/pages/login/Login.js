@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import UserContext from "../../context/UserContext";
 
 export default function Login() {
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -15,9 +15,7 @@ export default function Login() {
     },
     validate,
     onSubmit: (values) => {    
-      console.log(user.isLoggedIn);  
       setUser({isLoggedIn: true, name: values.username});
-      console.log(values.username);
       navigate("/dashboard");
     },
   });
