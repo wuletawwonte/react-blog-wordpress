@@ -1,16 +1,24 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { useFormik } from "formik";
+import UserContext from "../../context/UserContext";
 
 export default function Login() {
+  const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       username: "",
       password: "",
     },
     validate,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: (values) => {    
+      console.log(user.isLoggedIn);  
+      setUser({isLoggedIn: true, name: values.username});
+      console.log(values.username);
+      navigate("/dashboard");
     },
   });
   return (
