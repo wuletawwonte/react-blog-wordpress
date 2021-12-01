@@ -16,7 +16,7 @@ export default function Login() {
     validate,
     onSubmit: (values) => {    
       console.log(user.isLoggedIn);  
-      setUser({isLoggedIn: true, name: "Wuletaw Wonte"});
+      setUser({isLoggedIn: true, name: values.username});
       console.log(values.username);
       navigate("/dashboard");
     },
