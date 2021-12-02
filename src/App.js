@@ -2,15 +2,15 @@ import { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
 import routes from "./config/routes";
 import UserContext from "./context/UserContext";
 import Dashboard from "./pages/dashboard/Dashboard";
-import Login from "./pages/login/Login";
 
 function App() {
-  const [user, setUser] = useState({isLoggedIn: false, user: null});
+  const [user, setUser] = useState({isLoggedIn: false, user: null, token: null});
 
 
   return (
@@ -28,7 +28,7 @@ function App() {
           })}
           <Route
             path="/dashboard"            
-            element={user.isLoggedIn ? <Dashboard /> : <Login />}
+            element={user.isLoggedIn ? <Dashboard /> : <Navigate to="/login" />}
           />
         </Routes>
       </Router>

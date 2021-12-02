@@ -3,9 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { useFormik } from "formik";
 import UserContext from "../../context/UserContext";
+import axios from "axios";
 
 export default function Login() {
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -14,11 +15,24 @@ export default function Login() {
       password: "",
     },
     validate,
-    onSubmit: (values) => {    
-      console.log(user.isLoggedIn);  
-      setUser({isLoggedIn: true, name: values.username});
-      console.log(values.username);
-      navigate("/dashboard");
+    onSubmit: (values, {setErrors, resetForm}) => {
+      axios
+        .post("/wp-json/jwt-auth/v1/token", {
+          username: values.username,
+          password: values.password,
+        })
+        .then((res) => {
+          if (res.status === 200) {
+            resetForm();
+            setUser({ isLoggedIn: true, name: res.data.user_display_name });
+            navigate("/dashboard");
+          }
+        })
+        .catch((err) => {
+          console.log(JSON.stringify(err));
+          setErrors({ formError: err.message });
+          // resetForm();
+        });
     },
   });
   return (
@@ -43,9 +57,11 @@ export default function Login() {
           <h2>Signin here</h2>
           <p>Please enter your username and password</p>
           <form onSubmit={formik.handleSubmit}>
+            {formik.errors.formError ? (
+              <div className="errorContainer">{formik.errors.formError}</div>
+            ) : null}
             <div className="inputContainer">
-              <input
-                id="username"
+              <input              
                 name="username"
                 className="username"
                 type="text"
@@ -53,7 +69,6 @@ export default function Login() {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.username}
-                
               />
               {formik.touched.username && formik.errors.username ? (
                 <div className="errorContainer">{formik.errors.username}</div>
@@ -61,7 +76,6 @@ export default function Login() {
             </div>
             <div className="inputContainer">
               <input
-                id="password"
                 name="password"
                 className="password"
                 type="password"
