@@ -1,0 +1,84 @@
+.header {
+  height: 50px;
+  width: 100%;
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  justify-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header h2 {
+  background-color: transparent;
+  flex: 4;
+  font-weight: normal;
+}
+
+.rightHeader {
+  text-align: center;
+  flex: 4;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.rightHeader span {
+  background-color: transparent;
+}
+
+.rightHeader span b{
+    background-color: transparent;
+}
+
+.rightHeader button {
+  height: 50px;
+  border: none;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  outline: solid white 0.5px;
+  color: black;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background-color: yellow;
+}
+
+.search {
+    flex: 4;
+    background-color: transparent;
+    align-items: center;
+    border: none;
+    outline: none;
+}
+
+.search input {
+    font-size: 16px;
+    color: rgb(36, 35, 35);
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    min-width: auto;
+    padding-left: 18px;
+    padding-right: 18px;
+    /* outline: solid gray 1px; */
+}
+
+.search input:focus {
+    outline: solid gray 1px;
+
+}
+
+.dashboardContent {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 50px;
+}
