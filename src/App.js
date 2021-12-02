@@ -10,7 +10,7 @@ import UserContext from "./context/UserContext";
 import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
-  const [user, setUser] = useState({isLoggedIn: false, user: null});
+  const [user, setUser] = useState({isLoggedIn: false, user: null, token: null});
 
 
   return (
