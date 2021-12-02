@@ -1,10 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
 import routes from "./config/routes";
-import { UserProvider } from "./context/UserProvider";
+import UserContext from "./context/UserContext";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
+  const [user, setUser] = useState({isLoggedIn: false, user: null, token: null});
+
+
   return (
-    <UserProvider>
+    <UserContext.Provider value={{user, setUser}}>
       <Router>
         <Routes>
           {routes.map((route) => {
@@ -16,9 +26,13 @@ function App() {
               />
             );
           })}
+          <Route
+            path="/dashboard"            
+            element={user.isLoggedIn ? <Dashboard /> : <Navigate to="/login" />}
+          />
         </Routes>
       </Router>
-    </UserProvider>
+    </UserContext.Provider>
   );
 }
 
