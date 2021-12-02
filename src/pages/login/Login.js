@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { useFormik } from "formik";
 import UserContext from "../../context/UserContext";
+import axios from "axios";
 
 export default function Login() {
   const { setUser } = useContext(UserContext);
@@ -14,9 +15,18 @@ export default function Login() {
       password: "",
     },
     validate,
-    onSubmit: (values) => {    
-      setUser({isLoggedIn: true, name: values.username});
-      navigate("/dashboard");
+    onSubmit: (values) => {
+      axios.post("/wp-json/jwt-auth/v1/token", {username: values.username, password: values.password})
+        .then((res) => {
+          console.log(res);
+          if(res.status === 403) {
+            window.location.reload();
+          } else if(res.status === 200) {
+            setUser({isLoggedIn: true, name: res.data.user_display_name});
+            navigate("/dashboard");      
+          }
+        })
+        .catch((err) => console.log(err));    
     },
   });
   return (
