@@ -30,7 +30,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="dashboardContent">
-        <h2>Dashboard Page</h2>
+        <h2>Dashboard Page</h2>        
       </div>
     </>
   );

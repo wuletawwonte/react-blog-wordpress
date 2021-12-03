@@ -82,3 +82,8 @@
   padding-right: 15%;
   padding-top: 50px;
 }
+
+.dashboardContent h2 {
+    padding-bottom: 3px;
+    border-bottom: solid gray 1px;
+}
