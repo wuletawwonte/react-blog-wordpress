@@ -29,7 +29,7 @@ export default function Dashboard() {
           </button>
         </div>
       </div>
-      <div className="dashboardContent">
+      <div className="container">
         <h2>Dashboard Page</h2>
         <div className="row">
           <div className="col-2">column one</div>
