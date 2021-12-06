@@ -11,7 +11,12 @@
 }
 
 .row {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  width: 100%;  
 }
 
 .col-1 {

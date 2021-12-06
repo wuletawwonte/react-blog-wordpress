@@ -34,6 +34,9 @@ export default function Dashboard() {
         <div className="row">
           <div className="col-1">column one</div>
           <div className="col-2">column two</div>
+          <div className="col-3">column two</div>
+          <div className="col-4">column two</div>
+          <div className="col-5">column two</div>
         </div>
       </div>
     </>
