@@ -62,3 +62,9 @@
     background: none;
     cursor: pointer;
 }
+
+@media only screen and (min-width: 700px) {
+    .hidden-menu-btn {
+        display: none;
+    }
+}
