@@ -12,24 +12,28 @@ export default function AdminNavbar() {
     <div className="navbar-container">
       <div className="navbar-inner-container">
         <div className="left-navbar">
-            <Link to="/dashboard" className="logo-text">Gracesoft</Link>
+          <Link to="/dashboard" className="logo-text">
+            Gracesoft
+          </Link>
         </div>
         <div className="right-navbar">
-          <Link to="/" className="text-link">
-            Home
-          </Link>
-          <Link to="/user" className="text-link">
-            {user.name}
-          </Link>
-          <button
-            onClick={() => {
-              setUser({ isLoggedIn: false, name: null });
-              navigate("/login");
-            }}
-            className="logout-btn"
-          >
-            Logout
-          </button>
+          <div className="links-container">
+            <Link to="/" className="text-link">
+              Home
+            </Link>
+            <Link to="/user" className="text-link">
+              {user.name}
+            </Link>
+            <button
+              onClick={() => {
+                setUser({ isLoggedIn: false, name: null });
+                navigate("/login");
+              }}
+              className="logout-btn"
+            >
+              Logout
+            </button>
+          </div>
           <button className="hidden-menu-btn">&#8801;</button>
         </div>
       </div>

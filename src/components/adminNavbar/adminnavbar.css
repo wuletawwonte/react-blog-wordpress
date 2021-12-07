@@ -7,7 +7,7 @@
 
 .left-navbar {
   display: flex;
-  flex: 50%;
+  flex: 30%;
   align-items: flex-start;
   align-items: center;
   background-color: transparent;
@@ -16,9 +16,13 @@
 .right-navbar {
   background-color: transparent;
   display: flex;
-  flex: 50%;
+  flex: 70%;
   align-items: center;
   justify-content: flex-end;
+}
+
+.links-container {
+    background-color: transparent;
 }
 
 .navbar-inner-container {
@@ -65,6 +69,12 @@
 
 @media only screen and (min-width: 700px) {
     .hidden-menu-btn {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .links-container {
         display: none;
     }
 }
