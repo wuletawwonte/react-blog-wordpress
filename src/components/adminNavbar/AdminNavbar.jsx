@@ -11,7 +11,9 @@ export default function AdminNavbar() {
   return (
     <div className="navbar-container">
       <div className="navbar-inner-container">
-        <div className="left-navbar"></div>
+        <div className="left-navbar">
+            <Link to="/dashboard" className="logo-text">Gracesoft</Link>
+        </div>
         <div className="right-navbar">
           <Link to="/" className="text-link">
             Home
@@ -28,8 +30,10 @@ export default function AdminNavbar() {
           >
             Logout
           </button>
+          <button className="hidden-menu-btn">&#8801;</button>
         </div>
       </div>
+      <div className="extended-container"></div>
     </div>
   );
 }
