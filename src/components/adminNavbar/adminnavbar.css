@@ -1,0 +1,47 @@
+.navbar-container {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-navbar {
+  display: flex;
+  flex: 50%;
+  align-items: flex-start;
+  padding-left: 5%;
+  align-items: center;
+  background-color: transparent;
+}
+
+.right-navbar {
+  background-color: transparent;
+  display: flex;
+  flex: 50%;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.navbar-inner-container {
+    background-color: gold;
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+
+.text-link {
+  text-decoration: none;
+  font-size: larger;
+  margin: 10px;
+  color: black;
+  background-color: transparent;
+}
+
+.logout-btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  height: 60px;
+  font-size: larger;
+}
