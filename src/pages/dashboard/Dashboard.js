@@ -1,13 +1,11 @@
-import "./dashboard.css";
-import { useContext, useState, useEffect } from "react";
-import UserContext from "../../context/UserContext";
-import { useNavigate } from "react-router";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "../../components/post/Post";
+import AdminNavbar from "../../components/adminNavbar/AdminNavbar";
+import "./dashboard.css";
+
 
 export default function Dashboard() {
-  const { user, setUser } = useContext(UserContext);
-  const navigate = useNavigate();
   const [posts, setPosts] = useState({});
 
   useEffect(() => {
@@ -23,7 +21,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className="header">
+      {/* <div className="header">
         <h2>Gracesoft</h2>
         <div className="search">
           <input type="text" placeholder="search..." />
@@ -42,10 +40,11 @@ export default function Dashboard() {
             Logout
           </button>
         </div>
-      </div>
+      </div> */}
+      <AdminNavbar />
       <div className="container">
         <h2>Dashboard Page</h2>
-        <div className="row">
+        <div className="row mainContent">
           <div className="col-3">column one</div>
           <div className="col-9">
             {posts.isLoaded
