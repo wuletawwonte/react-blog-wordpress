@@ -9,10 +9,8 @@ export default function AdminNavbar() {
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
-  console.log(extendedBtn);
-
   return (
-    <div className="navbar-container">
+    <div className="navbar-container" style={extendedBtn ? {height: '100vh'} : {height : '60px'}}>
       <div className="navbar-inner-container">
         <div className="left-navbar">
           <Link to="/dashboard" className="logo-text">
@@ -47,7 +45,15 @@ export default function AdminNavbar() {
           </button>
         </div>
       </div>
-      <div className="extended-container"></div>
+      {extendedBtn && 
+      <div className="extended-container">
+        <Link to="/" className="text-link">
+          Home
+        </Link>
+        <Link to="/user" className="text-link">
+          {user.name}
+        </Link>
+      </div> }
     </div>
   );
 }

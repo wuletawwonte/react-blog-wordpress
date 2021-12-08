@@ -74,8 +74,20 @@
     border: none;
 }
 
+.extended-container {
+    background-color: gold;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 @media only screen and (min-width: 700px) {
     .hidden-menu-btn {
+        display: none;
+    }
+
+    .extended-container {
         display: none;
     }
 }
