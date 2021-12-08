@@ -21,30 +21,10 @@ export default function Dashboard() {
 
   return (
     <>
-      {/* <div className="header">
-        <h2>Gracesoft</h2>
-        <div className="search">
-          <input type="text" placeholder="search..." />
-        </div>
-        <div className="rightHeader">
-          <span>
-            Welcome <b>{user.name}</b>
-          </span>
-
-          <button
-            onClick={() => {
-              setUser({ isLoggedIn: false, name: null });
-              navigate("/login");
-            }}
-          >
-            Logout
-          </button>
-        </div>
-      </div> */}
       <AdminNavbar />
       <div className="container">
         <h2>Dashboard Page</h2>
-        <div className="row mainContent">
+        <div className="row container">
           <div className="col-3">column one</div>
           <div className="col-9">
             {posts.isLoaded

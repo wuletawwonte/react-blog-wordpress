@@ -10,17 +10,27 @@ export default function AdminNavbar() {
   const navigate = useNavigate();
 
   return (
-    <div className="navbar-container" style={extendedBtn ? {height: '100vh'} : {height : '60px'}}>
+    <div
+      className="navbar-container"
+      style={
+        extendedBtn
+          ? { height: "100vh", overflow: "hidden" }
+          : { height: "60px" }
+      }
+    >
       <div className="navbar-inner-container">
         <div className="left-navbar">
           <Link to="/dashboard" className="logo-text">
-            Gracesoft
+            GRACE<span>SOFT</span>
           </Link>
         </div>
         <div className="right-navbar">
           <div className="links-container">
             <Link to="/" className="text-link">
               Home
+            </Link>
+            <Link to="/" className="text-link">
+              Pages
             </Link>
             <Link to="/user" className="text-link">
               {user.name}
@@ -45,15 +55,20 @@ export default function AdminNavbar() {
           </button>
         </div>
       </div>
-      {extendedBtn && 
-      <div className="extended-container">
-        <Link to="/" className="text-link">
-          Home
-        </Link>
-        <Link to="/user" className="text-link">
-          {user.name}
-        </Link>
-      </div> }
+      {extendedBtn && (
+        <div className="extended-container">
+          <Link to="/" className="text-link">
+            Home
+          </Link>
+          <Link to="/" className="text-link">
+            Pages
+          </Link>
+
+          <Link to="/user" className="text-link">
+            {user.name}
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

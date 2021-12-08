@@ -90,5 +90,9 @@
   .container {
     max-width: 540px;
   }
+
+  [class*="col-"] {
+    width: 100%;
+  }
 }
 
