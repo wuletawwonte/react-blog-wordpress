@@ -75,23 +75,24 @@
 }
 
 .container {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .dashboard-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .side-menu {
-  flex: 30%;
-  /* padding: 0 5px; */
+  flex-grow: 0;
+  flex-basis: 28%;
 }
 
 .main-content {
-  flex: 70%;
-  flex-grow: 2;
-  padding: 10px;
+  flex-basis: 68%;
+  padding: 3%;
+  background-color: white;
 }
 
 @media only screen and (max-width: 768px) {
@@ -106,10 +107,15 @@
 }
 
 .menu-item-link {
-  background-color: #dddddd;
+  background-color: white;
   display: block;
   color: black;
   padding: 12px;
   text-decoration: none;
   font-size: 20px;
+  border-bottom: solid #f9f6ec 2px;
+}
+
+.menu-item-link:hover {
+  background-color: #c4c3c3;
 }
