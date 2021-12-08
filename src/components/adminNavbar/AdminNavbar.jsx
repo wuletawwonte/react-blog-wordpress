@@ -1,12 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import "./adminnavbar.css";
 
 export default function AdminNavbar() {
+  const [extendedBtn, setExtendedBtn] = useState(false);
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
+
+  console.log(extendedBtn);
 
   return (
     <div className="navbar-container">
@@ -34,7 +37,14 @@ export default function AdminNavbar() {
               Logout
             </button>
           </div>
-          <button className="hidden-menu-btn">&#8801;</button>
+          <button
+            className="hidden-menu-btn"
+            onClick={() => {
+              setExtendedBtn((curr) => !curr);
+            }}
+          >
+            {extendedBtn ? <>&#10005;</> : <>&#8801;</>}
+          </button>
         </div>
       </div>
       <div className="extended-container"></div>

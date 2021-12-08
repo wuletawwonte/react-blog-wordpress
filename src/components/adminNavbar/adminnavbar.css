@@ -61,10 +61,17 @@
 }
 
 .hidden-menu-btn {
-    font-size: xx-large;
+    font-size: 50px;
+    width: 50px;
     border: none;
     background: none;
     cursor: pointer;
+    align-content: center;
+}
+
+.hidden-menu-btn:focus {
+    background: none;
+    border: none;
 }
 
 @media only screen and (min-width: 700px) {
