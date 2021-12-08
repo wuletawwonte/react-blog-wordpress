@@ -2,7 +2,7 @@
   height: 60px;
   width: 100%;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 .left-navbar {
@@ -21,11 +21,11 @@
 }
 
 .links-container {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .navbar-inner-container {
-    background-color: gold;
+  background-color: gold;
   display: flex;
   width: 100%;
   height: 60px;
@@ -51,55 +51,55 @@
 }
 
 .logo-text {
-    cursor: pointer;
-    font-size: xx-large;
-    font-weight: bolder;
-    color: black;
-    background-color: transparent;
-    text-decoration: none;
-    border: solid white 3px;
-    padding: 0 15px;
+  cursor: pointer;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  border: solid white 3px;
+  padding: 0 15px;
 }
 
 .logo-text span {
-    background-color: transparent;
-    font-weight: 100;
+  background-color: transparent;
+  font-weight: 100;
 }
 
 .hidden-menu-btn {
-    font-size: 50px;
-    width: 50px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    align-content: center;
+  font-size: 50px;
+  width: 50px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-content: center;
 }
 
 .hidden-menu-btn:focus {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 .extended-container {
-    background-color: gold;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+  background-color: gold;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 @media only screen and (min-width: 700px) {
-    .hidden-menu-btn {
-        display: none;
-    }
+  .hidden-menu-btn {
+    display: none;
+  }
 
-    .extended-container {
-        display: none;
-    }
+  .extended-container {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-    .links-container {
-        display: none;
-    }
+  .links-container {
+    display: none;
+  }
 }
