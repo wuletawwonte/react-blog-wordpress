@@ -1,0 +1,18 @@
+.main-content-header {
+    padding: 1rem;
+    border-bottom: solid gray 1px;
+  }
+  
+  .main-content-header > h3 {
+    font-weight: normal;
+  }
+
+  .tab {
+      display: none;
+  }
+
+  .tab:checked + label {
+    background: #eee;
+  }
+
+  

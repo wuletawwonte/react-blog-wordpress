@@ -5,6 +5,7 @@ import AdminNavbar from "../../components/adminNavbar/AdminNavbar";
 import "./dashboard.css";
 import Menu from "../../components/menu/Menu";
 import SideMenuUser from "../../components/sideMenuUser/SideMenuUser";
+import AdminContentHeader from "../../components/adminContentHeader/AdminContentHeader";
 
 export default function Dashboard() {
   const [posts, setPosts] = useState({});
@@ -30,6 +31,7 @@ export default function Dashboard() {
             <Menu />
           </div>
           <div className="item main-content">
+            <AdminContentHeader />
             {posts.isLoaded
               ? posts.data.map((post) => {
                   return (
