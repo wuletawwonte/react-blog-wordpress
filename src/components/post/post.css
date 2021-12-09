@@ -4,16 +4,24 @@
     padding: 15px 2%;
     display: flex;
     gap: 3%;
+    flex-wrap: wrap;
 }
 
 .post-img-content {
-    flex-basis: 30%;
     max-width: 30%;
     object-fit: cover;
 }
 
 .post-text-content {
     flex-grow: 1;
+    flex-basis: 65%;
+}
+
+
+@media only screen and (max-width: 575px) {
+    .post-img-content, .post-text-content {
+        max-width: 100%;
+    }
 }
 
 .post-text-content h2 {
