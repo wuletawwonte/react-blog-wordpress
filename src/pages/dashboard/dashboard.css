@@ -93,6 +93,7 @@
   flex-basis: 68%;
   padding: 3%;
   background-color: white;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -101,21 +102,3 @@
   }
 }
 
-.menu {
-  list-style-type: none;
-  padding: 0;
-}
-
-.menu-item-link {
-  background-color: white;
-  display: block;
-  color: black;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 20px;
-  border-bottom: solid #f9f6ec 2px;
-}
-
-.menu-item-link:hover {
-  background-color: #c4c3c3;
-}

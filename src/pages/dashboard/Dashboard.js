@@ -3,7 +3,7 @@ import axios from "axios";
 import Post from "../../components/post/Post";
 import AdminNavbar from "../../components/adminNavbar/AdminNavbar";
 import "./dashboard.css";
-import { Link } from "react-router-dom";
+import Menu from "../../components/menu/Menu";
 
 export default function Dashboard() {
   const [posts, setPosts] = useState({});
@@ -25,20 +25,7 @@ export default function Dashboard() {
       <div className="container">
         <div className="dashboard-container">
           <div className="item side-menu">
-            <ul className="menu">
-              <li className="menu-item">
-                <Link to="/" className="menu-item-link">Dashboard</Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/" className="menu-item-link">Add Post</Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/" className="menu-item-link">Pages</Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/" className="menu-item-link">Settings</Link>
-              </li>
-            </ul>
+            <Menu />
           </div>
           <div className="item main-content">
             {posts.isLoaded
