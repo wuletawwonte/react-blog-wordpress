@@ -1,0 +1,16 @@
+
+.post-container {
+    border-bottom: solid #e2e0da 1px;
+    padding: 15px 2%;
+    display: flex;
+    gap: 3%;
+}
+
+.post-img-content {
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.post-text-content {
+    flex-grow: 1;
+}

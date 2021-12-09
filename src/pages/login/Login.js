@@ -24,7 +24,7 @@ export default function Login() {
         .then((res) => {
           if (res.status === 200) {
             resetForm();
-            setUser({ isLoggedIn: true, name: res.data.user_display_name });
+            setUser({ isLoggedIn: true, name: res.data.user_display_name, nice_name: res.data.user_nicename });
             navigate("/dashboard");
           }
         })

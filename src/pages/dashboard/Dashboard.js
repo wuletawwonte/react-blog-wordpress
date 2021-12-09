@@ -35,6 +35,7 @@ export default function Dashboard() {
                   return (
                     <div key={post.id}>
                       <Post
+                        featured_image_url={post.featured_image_url}
                         title={post.title.rendered}
                         excerpt={post.excerpt.rendered}
                       />

@@ -22,7 +22,8 @@ export default function SideMenuUser() {
         <div className="user-container">
             {avatar ? 
             <img className="avatar" src={avatar} alt={user.name} /> : ""}
-            <h3>{user.name}</h3>            
+            <h3>{user.name}</h3>  
+            <p>@{user.nice_name}</p>          
         </div>
     )
 }
