@@ -20,7 +20,8 @@ export default function Post(props) {
 
   return (
     <div className="post-container">
-      <img src={featured_image_url} alt={title} className="post-img-content"  />
+      { featured_image_url ?
+      <img src={featured_image_url} alt={title} className="post-img-content"  /> : ""}
       <div className="post-text-content">
         <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
         <p dangerouslySetInnerHTML={{ __html: excerpt.substring(0, 150) }}></p>
