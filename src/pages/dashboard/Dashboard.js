@@ -38,6 +38,7 @@ export default function Dashboard() {
                         featured_image_url={post.featured_image_url}
                         title={post.title.rendered}
                         excerpt={post.excerpt.rendered}
+                        author_id={post.author}
                       />
                     </div>
                   );

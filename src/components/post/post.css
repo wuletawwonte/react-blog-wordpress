@@ -9,8 +9,17 @@
 .post-img-content {
     flex-basis: 30%;
     max-width: 30%;
+    object-fit: cover;
 }
 
 .post-text-content {
     flex-grow: 1;
+}
+
+.post-text-content h2 {
+    color: black;
+}
+
+.post-text-content p {
+    color: gray;
 }
