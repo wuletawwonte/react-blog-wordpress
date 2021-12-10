@@ -2,7 +2,6 @@
   padding-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  border-bottom: solid gray 1px;
 }
 
 .main-content-header > h3 {
@@ -10,8 +9,10 @@
 }
 
 .admin-header-menu-container {
-    padding-top: 2ch;
-    padding-right: 2ch;
+  padding-top: 2ch;
+  padding-right: 2ch;
+  padding-bottom: 6px;
+  /* border-bottom: solid gray 1px; */
 }
 
 .admin-header-menu {
@@ -26,9 +27,16 @@
 }
 
 .header-link {
-    color: black;
-    margin-right: 1ch;
-    text-decoration: none;
-    background-color: lavender;
-    padding: 4px 1ch;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 2ch;
+}
+
+.header-link:hover {
+    border-bottom: solid lavender 3px;
+}
+
+.active, .active:hover {
+    background-color: rgb(241, 241, 252);
+    border-bottom: solid orange 3px;
 }
