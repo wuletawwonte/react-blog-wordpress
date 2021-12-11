@@ -12,13 +12,14 @@
   padding-top: 2ch;
   padding-right: 2ch;
   padding-bottom: 6px;
-  /* border-bottom: solid gray 1px; */
+  overflow: hidden;
 }
 
 .admin-header-menu {
   list-style-type: none;
   display: flex;
   padding-left: 0;
+  width: 100%;
 }
 
 .admin-header-menu li {

@@ -67,7 +67,6 @@
   min-width: auto;
   padding-left: 18px;
   padding-right: 18px;
-  /* outline: solid gray 1px; */
 }
 
 .search input:focus {
@@ -81,6 +80,7 @@
 .dashboard-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 2%;
   justify-content: space-between;
 }
 
@@ -90,13 +90,16 @@
 }
 
 .main-content {
-  flex-basis: 68%;
+  flex-basis: 70%;
+  flex-shrink: 1;
+  flex-grow: 1;
   background-color: white;
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .item {
-    flex: 100%;
+    flex-basis: 100%;
+    width: 100%;
   }
 }
