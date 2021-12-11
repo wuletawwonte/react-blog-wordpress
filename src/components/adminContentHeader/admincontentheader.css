@@ -12,7 +12,13 @@
   padding-top: 2ch;
   padding-right: 2ch;
   padding-bottom: 6px;
-  overflow: hidden;
+  overflow-x: auto;
+  height: 70px;
+}
+
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .admin-header-menu {
