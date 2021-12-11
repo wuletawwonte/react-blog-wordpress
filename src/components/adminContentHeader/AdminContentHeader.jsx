@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import "./admincontentheader.css";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function AdminContentHeader() {
+    // const [activeCategory, setActiveCategory] = useState(null);
     const [categories, setCategories] = useState({
         isLoaded: false,
         data: null,
@@ -25,17 +25,17 @@ export default function AdminContentHeader() {
             <div className="admin-header-menu-container">
                 <ul className="admin-header-menu">
                     <li>
-                        <Link to="#" className="header-link active">
+                        <button className="header-link active">
                             All
-                        </Link>
+                        </button>
                     </li>
                     {categories.isLoaded
                         ? categories.data.map((category) => {
                               return (
                                   <li key={category.id}>
-                                      <Link to="#" className="header-link">
+                                      <button className="header-link">
                                           {category.name}
-                                      </Link>
+                                      </button>
                                   </li>
                               );
                           })
