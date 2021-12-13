@@ -11,7 +11,7 @@ export default function Menu() {
           </Link>
         </li>
         <li className="menu-item">
-          <Link to="/" className="menu-item-link">
+          <Link to="/dashboard/addpost" className="menu-item-link">
             Add Post
           </Link>
         </li>
