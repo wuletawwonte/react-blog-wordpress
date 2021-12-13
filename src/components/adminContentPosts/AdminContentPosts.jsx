@@ -2,6 +2,7 @@ import "./admincontentposts.css";
 import axios from "axios";
 import { useState, useEffect } from 'react';
 import Post from "../post/Post"; 
+import Loading from "../loading/Loading";
 
 export default function AdminContentPosts(props) { 
     const activeCategory = props.category;   
@@ -39,7 +40,7 @@ export default function AdminContentPosts(props) {
                           </div>
                       );
                   })
-                : "Loading"}
+                : <Loading type="posts.gif" /> }
         </div>
     );
 }

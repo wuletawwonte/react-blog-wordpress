@@ -1,0 +1,8 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+}
+
+.loading {
+    max-width: 50px;
+}

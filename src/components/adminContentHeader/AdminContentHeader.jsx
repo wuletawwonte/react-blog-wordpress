@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./admincontentheader.css";
 import axios from "axios";
+import Loading from "../loading/Loading";
 
 export default function AdminContentHeader(props) {
     const { activeCategory, setActiveCategory } = props.category;
@@ -44,7 +45,7 @@ export default function AdminContentHeader(props) {
                                   </li>
                               );
                           })
-                        : "Loading"}
+                        : <Loading type="container.gif" />}
                 </ul>
             </div>
         </div>
