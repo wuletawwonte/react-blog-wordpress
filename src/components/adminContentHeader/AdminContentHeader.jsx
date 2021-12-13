@@ -26,7 +26,7 @@ export default function AdminContentHeader(props) {
             <div className="admin-header-menu-container">
                 <ul className="admin-header-menu">
                     <li>
-                        <button className="header-link active" onClick={() => {
+                        <button className={`header-link ${activeCategory === null ? 'active' : ''}`} onClick={() => {
                             setActiveCategory(null);
                         }}>
                             All
@@ -36,7 +36,7 @@ export default function AdminContentHeader(props) {
                         ? categories.data.map((category) => {
                               return (
                                   <li key={category.id}>
-                                      <button className="header-link" onClick={() => {
+                                      <button className={`header-link ${activeCategory === category.id ? 'active' : ''}`} onClick={() => {
                                           setActiveCategory(category.id);
                                       }}>
                                           {category.name}
