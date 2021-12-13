@@ -42,7 +42,7 @@ function App() {
                             )
                         }
                     >
-                        <Route path="" element={<Dashboard />} />
+                        <Route index exact element={<Dashboard />} />
                         <Route path="addpost" element={<AddPost />} />
                     </Route>
                 </Routes>

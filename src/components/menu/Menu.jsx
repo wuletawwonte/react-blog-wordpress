@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./menu.css";
 
 export default function Menu() {
@@ -6,24 +6,36 @@ export default function Menu() {
     <>
       <ul className="menu">
         <li className="menu-item">
-          <Link to="/dashboard" className="menu-item-link menu-active">
+          <NavLink end to="/dashboard" className={(linkStatus) => {
+            if(linkStatus.isActive) {
+              return "menu-item-link menu-active";
+            } else {
+              return "menu-item-link";
+            }
+          }}>
             Dashboard
-          </Link>
+          </NavLink>
         </li>
         <li className="menu-item">
-          <Link to="/dashboard/addpost" className="menu-item-link">
+          <NavLink to="/dashboard/addpost" className={(linkStatus) => {
+            if(linkStatus.isActive) {
+              return "menu-item-link menu-active";
+            } else {
+              return "menu-item-link";
+            }
+          }}>
             Add Post
-          </Link>
+          </NavLink>
         </li>
         <li className="menu-item">
-          <Link to="/" className="menu-item-link">
+          <NavLink to="/" className="menu-item-link">
             Pages
-          </Link>
+          </NavLink>
         </li>
         <li className="menu-item">
-          <Link to="/" className="menu-item-link">
+          <NavLink to="/" className="menu-item-link">
             Settings
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </>
