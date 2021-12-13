@@ -11,9 +11,14 @@
   padding: 12px;
   text-decoration: none;
   font-size: 20px;
-  border-bottom: solid #f9f6ec 2px;
+  /* border-bottom: solid #f9f6ec 2px; */
 }
 
 .menu-item-link:hover {
-  background-color: #c4c3c3;
+  background-color: #eeeeee;
 }
+
+.menu-active, .menu-active:hover{
+  background-color: #dfdede;
+}
+

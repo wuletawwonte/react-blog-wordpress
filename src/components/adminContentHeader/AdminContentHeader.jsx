@@ -5,7 +5,6 @@ import Loading from "../loading/Loading";
 
 export default function AdminContentHeader(props) {
     const { activeCategory, setActiveCategory } = props.category;
-    console.log(activeCategory);
     const [categories, setCategories] = useState({
         isLoaded: false,
         data: null,

@@ -6,7 +6,7 @@ export default function Menu() {
     <>
       <ul className="menu">
         <li className="menu-item">
-          <Link to="/" className="menu-item-link">
+          <Link to="/dashboard" className="menu-item-link menu-active">
             Dashboard
           </Link>
         </li>
