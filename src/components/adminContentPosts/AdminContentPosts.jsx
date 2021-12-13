@@ -3,7 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 import Post from "../post/Post"; 
 
-export default function AdminContentPosts() {
+export default function AdminContentPosts(props) { 
+    const activeCategory = props.category;   
     const [posts, setPosts] = useState({
         isLoaded: false,
         data: null,
@@ -11,7 +12,7 @@ export default function AdminContentPosts() {
     });
 
     useEffect(() => {
-        axios("/wp-json/wp/v2/posts")
+        axios(`/wp-json/wp/v2/posts${activeCategory ? `?categories=${activeCategory}` : ""}`)
             .then((res) => {
                 setPosts({
                     isLoaded: true,
@@ -21,7 +22,7 @@ export default function AdminContentPosts() {
             .catch((err) => {
                 console.log(err);
             });
-    }, []);
+    }, [activeCategory]);
 
     return (
         <div>

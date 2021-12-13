@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import "./admincontentheader.css";
 import axios from "axios";
 
-export default function AdminContentHeader() {
-    // const [activeCategory, setActiveCategory] = useState(null);
+export default function AdminContentHeader(props) {
+    const { activeCategory, setActiveCategory } = props.category;
+    console.log(activeCategory);
     const [categories, setCategories] = useState({
         isLoaded: false,
         data: null,
@@ -25,7 +26,9 @@ export default function AdminContentHeader() {
             <div className="admin-header-menu-container">
                 <ul className="admin-header-menu">
                     <li>
-                        <button className="header-link active">
+                        <button className="header-link active" onClick={() => {
+                            setActiveCategory(null);
+                        }}>
                             All
                         </button>
                     </li>
@@ -33,7 +36,9 @@ export default function AdminContentHeader() {
                         ? categories.data.map((category) => {
                               return (
                                   <li key={category.id}>
-                                      <button className="header-link">
+                                      <button className="header-link" onClick={() => {
+                                          setActiveCategory(category.id);
+                                      }}>
                                           {category.name}
                                       </button>
                                   </li>

@@ -39,6 +39,7 @@
   font-size: 1rem;
   padding: 5px 2ch;
   border: none;
+  cursor: pointer;
 }
 
 .header-link:hover {
