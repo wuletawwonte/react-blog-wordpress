@@ -1,0 +1,49 @@
+
+.add-post-container {
+    margin-top: 0px;
+}
+
+.add-post-header {
+    padding: 20px;
+    border-bottom: solid rgb(202, 201, 201) 1px;
+}
+
+.add-post-form {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-input {
+    height: 2.5rem;
+    font-size: 1.5rem;
+    padding: 1ch;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+}
+
+.title-input:active {
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+
+}
+
+.content-input {
+    font-size: 1.5rem;
+    padding: 1ch;
+}
+
+.add-post-btn {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+}
