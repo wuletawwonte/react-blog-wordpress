@@ -16,6 +16,13 @@
     object-fit: cover;
 }
 
+.post-img-content:hover {
+    transform: scale(1.02);
+    background-size: 150%;
+    transition: all .5s;
+    cursor: pointer;
+}
+
 .post-text-content {
     flex-basis: 70%;
 }
