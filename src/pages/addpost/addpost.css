@@ -26,11 +26,12 @@
     outline: none;
 }
 
-.title-input:active {
+.title-input:active , .title-input:focus{
     outline: none;
     border-left: none;
     border-right: none;
     border-top: none;
+    border-bottom: solid black 2px;
 
 }
 
@@ -40,6 +41,7 @@
 }
 
 .add-post-btn {
+    cursor: pointer;
     background-color: black;
     padding: 10px;
     color: white;
