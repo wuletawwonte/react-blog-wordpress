@@ -47,7 +47,7 @@ export default function AddPost() {
                             value={values.title}
                             placeholder="title ..."
                         />
-                        {errors.title && touched.title && errors.title}
+                        {touched.title && errors.title ? <span style={{color: 'red'}}>{errors.title}</span>: ''}
                         <textarea
                             type="text"
                             name="content"
@@ -58,7 +58,7 @@ export default function AddPost() {
                             rows="5"
                             placeholder="content ..."
                         />
-                        {errors.content && touched.content && errors.content}
+                        {touched.content && errors.content ? <span style={{color: 'red'}}>{errors.content}</span> : ''}
                         <button type="submit" className="add-post-btn" disabled={isSubmitting}>
                             Submit
                         </button>
