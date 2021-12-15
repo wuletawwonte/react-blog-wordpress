@@ -7,6 +7,10 @@
     border-bottom: solid rgb(202, 201, 201) 1px;
 }
 
+.add-post-header > p {
+    color:slategrey;
+}
+
 .add-post-form {
     margin-top: 20px;
     padding: 20px;
@@ -32,6 +36,7 @@
     font-size: 1.3rem;
     padding: 1ch;
     border: solid gray 1px;
+    resize: none;
 }
 
 .content-input:active, .content-input:focus {
@@ -40,7 +45,7 @@
 
 .add-post-btn {
     cursor: pointer;
-    background-color:black;
+    background-color:#333;
     padding: 10px;
     color: white;
     font-size: 1.2rem;
@@ -50,4 +55,5 @@
 
 .add-post-btn:hover {
     box-shadow: gold;
+    background-color: black;
 }

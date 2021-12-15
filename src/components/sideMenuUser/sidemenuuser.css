@@ -13,7 +13,8 @@
 
 .avatar {
     max-width: 96px;
-    outline: solid gray 1px;
+    border: solid white 2px;
+    outline: solid orange 2px;
     border-radius: 50%; 
     margin-bottom: 10px;
 }

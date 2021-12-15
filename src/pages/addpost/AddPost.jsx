@@ -6,6 +6,7 @@ export default function AddPost() {
         <div className="add-post-container">
             <div className="add-post-header">
                 <h2>Add Post</h2>
+                <p>The title and the content of the post must be added here.</p>
             </div>
             <Formik
                 initialValues={{ title: "", content: "" }}
